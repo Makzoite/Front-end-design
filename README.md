@@ -28,10 +28,10 @@ These instructions will get you a copy of the project up and running on your loc
 ```
 6. Run command to run on local server (localhost:8080)
 ```
-npm run start
+   npm run start
 ```
 7. Run command to get static contents. (This will produce static contents in the project directory (inside dist/). These contain the compiled CSS and transpiled JS, which you can then copy into a directory served by any web server.)
 ```
-npm run build
+  npm run build
 ```
 ---
