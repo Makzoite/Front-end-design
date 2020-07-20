@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet'
+        type='text/css'>
+    <link rel="stylesheet" href="bundle.css">
+    <title>Front-end design test</title>
+</head>
+
+<body>
+    <header class="mdc-top-app-bar mdc-top-app-bar--short custom-padding-0">
+        <div class="custom-top-app-bar mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <img class="company-logo" src="assets/generic-logo.png">
+            </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                <div class="custom-app-bar-right-section">
+                    <button class="mdc-button custom-padding-0">
+                        <span class="mdc-button__label custom-mdc-button_label">LOG-IN</span>
+                    </button>
+                    <button class="mdc-button mdc-button--raised custom-sign-up-button">
+                        <div class="mdc-button__ripple"></div>
+                        <span class="mdc-button__label custom-mdc-button_label">SIGN UP</span>
+                    </button>
+                </div>
+                <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button custom-menu-button"
+                    onclick="showResposiveMenus()" aria-label="Search">menu</button>
+            </section>
+        </div>
+        <div class="responsive-mobile" id="resposiveMobile">
+            <div class="responsive-menu">
+                <button class="mdc-button custom-padding-0">
+                    <span class="mdc-button__label custom-mdc-button_label">LOG-IN</span>
+                </button>
+            </div>
+            <div class="responsive-menu">
+                <button class="mdc-button mdc-button--raised custom-sign-up-button">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label custom-mdc-button_label">SIGN UP</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <section class="body-section-1" id="bodySection1">
+        <div class="parallax">
+            <div class="div1parallax">
+                <div>
+                    <h1 class="label-first">Make event management a breeze</h1>
+                </div>
+                <div>
+                    <label class="label-second">ACME Events Inc. making beautiful event landing pages a DIY
+                        adventure.</label>
+                </div>
+                <div>
+                    <button class="mdc-button mdc-button--raised custom-book-demo-button">
+                        <div class="mdc-button__ripple"></div>
+                        <span class="mdc-button__label custom-book-demo-button_label">Book Demo</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="body-section-2">
+        <div>
+            <div class="mdc-layout-grid grid-section-2">
+                <div class="mdc-layout-grid__inner">
+                    <div class="mdc-layout-grid__cell--span-4">
+                        <img class="img-heart-lamp" src="assets/heart-lamps.png">
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-8">
+                        <div class="section-2-text">
+                            <h5>Make your ticket holders happy</h5>
+                            <p>
+                                A beautiful little sunset. Talent is a pursued interest.
+                                That is to say, anything you practice you can do.
+                                This is probably the greatest thing that's ever happened in my life.
+                                These things happen automatically. All you have to do is just let them happen.
+                            </p>
+                            <p>
+                                Just let go - and fall like a little waterfall.
+                                Nothing's gonna make your husband or wife madder than coming home and having a
+                                snow-covered
+                                dinner. Just pretend you are a whisper floating across a mountain. Zip. That easy.
+                            </p>
+                            <a href="#">
+                                View full feature list
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="body-section-3">
+        <div class="youtube">
+            <iframe class="iframe-youtube" src="https://www.youtube.com/embed/TxbE79-1OSI" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </section>
+    <section class="body-section-2">
+        <div>
+            <div class="mdc-layout-grid">
+                <div class="mdc-layout-grid__inner">
+                    <div class="mdc-layout-grid__cell--span-6 form-field">
+                        <h5>Book a demo</h5>
+                        <div id="formContainer">
+                            <div class="error-message" id="errorMessage" style="display: none;">
+                                HEADS UP! There are errors in the form below
+                            </div>
+
+                            <div class="padding-top-30px">
+                                <label id="labelFirstName" class="formLabel">First name <span
+                                        class="error-validation">*</span></label>
+                                <label
+                                    class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label text-box">
+                                    <input class="mdc-text-field__input" id="firstNameText" type="text"
+                                        aria-label="Label">
+                                    <span id="firstNameOutline" class="mdc-notched-outline">
+                                        <span class="mdc-notched-outline__trailing"></span>
+                                    </span>
+                                </label>
+                                <label style="display: none;" class="error-validation" id="firstNameError">First name is
+                                    required.</label>
+                            </div>
+
+                            <div class="padding-top-30px">
+                                <label id="labelLastName" class="formLabel">Last name <span
+                                        class="error-validation">*</span></label>
+                                <label
+                                    class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label text-box">
+                                    <input class="mdc-text-field__input" id="lastNameText" type="text"
+                                        aria-label="Label">
+                                    <span id="lastNameOutline" class="mdc-notched-outline">
+                                        <span class="mdc-notched-outline__trailing"></span>
+                                    </span>
+                                </label>
+                                <label class="error-validation" id="lastNameError" style="display: none;">Last name is
+                                    required.</label>
+                            </div>
+
+                            <div class="padding-top-30px">
+                                <label id="labelEmail" class="formLabel">Email <span
+                                        class="error-validation">*</span></label>
+                                <label
+                                    class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label text-box">
+                                    <input class="mdc-text-field__input" type="text" id="emailText" aria-label="Label">
+                                    <span id="emailOutline" class="mdc-notched-outline">
+                                        <span class="mdc-notched-outline__trailing"></span>
+                                    </span>
+                                </label>
+                                <label class="error-validation" id="emailError" style="display: none;">Email is
+                                    required.</label>
+                            </div>
+
+                            <div class="padding-top-30px">
+                                <label id="labelPhoneNumber" class="formLabel">Phone number <span
+                                        class="error-validation">*</span></label>
+                                <label
+                                    class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label text-box">
+                                    <input class="mdc-text-field__input" type="text" id="phoneNumberText"
+                                        aria-label="Label">
+                                    <span id="phoneNumberOutline" class="mdc-notched-outline">
+                                        <span class="mdc-notched-outline__trailing"></span>
+                                    </span>
+                                </label>
+                                <label class="error-validation" id="phoneNumberError" style="display: none;">Phone
+                                    number is required.</label>
+                            </div>
+                            <div class="padding-top-30px">
+                                <button class="mdc-button mdc-button--raised submit-sign-up" onclick="formSubmit();">
+                                    <div class="mdc-button__ripple"></div>
+                                    <span class="mdc-button__label custom-mdc-button_label">SIGN UP</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="formSubmitting" style="display: none;">
+                            <div class="sk-chase pull-left">
+                                <div class="sk-chase-dot"></div>
+                                <div class="sk-chase-dot"></div>
+                                <div class="sk-chase-dot"></div>
+                                <div class="sk-chase-dot"></div>
+                                <div class="sk-chase-dot"></div>
+                                <div class="sk-chase-dot"></div>
+                            </div>
+                            <div class="pull-left label-submitting">
+                                <label>Submitting...</label>
+                            </div>
+                        </div>
+                        <div id="formSubmitted" class="form-submitted" style="display: none;">
+                            <div class="pull-left submitted-icon">
+                                <div>
+                                    <i class="fa fa-check"></i>
+                                </div>
+                            </div>
+                            <div class="pull-left">
+                                <div class="section-2-text submitted-text">
+                                    <h5>Demo request sent!</h5>
+                                    <p>
+                                        Someone will reach out to schedule your demo within the next 48 business hours
+                                    </p>
+                                    <a href="#">
+                                        Request another demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-6 custom-event-picture-div">
+                        <img class="event-picture" src="assets/event-picture.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer-full-section">
+        <section class="footer-section custom-padding-0>
+        <div class=" mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-3">
+                    <div class="footer-text-header">FEATURES</div>
+                    <div class="footer-text">Event organizer tools</div>
+                    <div class="footer-text">Timer tools</div>
+                    <div class="footer-text">Charity co-ordinator tools</div>
+                    <div class="footer-text">Participant experience</div>
+                </div>
+                <div class="mdc-layout-grid__cell--span-3">
+                    <div class="footer-text-header">TOOLS</div>
+                    <div class="footer-text">Dashboard maker</div>
+                    <div class="footer-text">Data & analytics</div>
+                    <div class="footer-text">Email marketing tools</div>
+                    <div class="footer-text">Social promotion tool</div>
+                </div>
+                <div class="mdc-layout-grid__cell--span-3">
+                    <div class="footer-text-header">CONTACT</div>
+                    <div class="footer-text"><span><i class="fa fa-phone"></i></span> 1-888-555-5555</div>
+                    <div class="footer-text"><span><i class="fa fa-envelope"></i></span> example@example.com</div>
+                    <div class="footer-text"><span><i class="fa fa-map-marker"></i></span> 123 Fake Street, London, ON
+                        <br> <span class="new-line-text">A1B 2C3</span></div>
+                </div>
+                <div class="mdc-layout-grid__cell--span-3">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2918.8353078893724!2d-81.25372648465668!3d42.98174277914993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882ef21d8c9d59fb%3A0xa637ea9287d6c236!2s103%20King%20St%2C%20London%2C%20ON%20N6A%206K1!5e0!3m2!1sen!2sca!4v1595266286697!5m2!1sen!2sca"
+                        frameborder="0" style="border:0; width: 100%;" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+                </div>
+            </div>
+            </div>
+        </section>
+    </section>
+    <section class="footer-section-1">
+        <div class="footer-container">
+
+            <div class=" mdc-layout-grid custom-padding-0 custom-grid-footer">
+                <div class="mdc-layout-grid__inner">
+                    <div class="mdc-layout-grid__cell--span-6 span-copyright">
+                        <div class="copyright">
+                            <label>© Copyright Acme Inc. <span id="copyright">2008</span></label>
+                        </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-6 span-social-icon">
+                        <span class="footer-social-icon">
+                            <i class="fa fa-instagram background-white"></i>
+                        </span>
+                        <span class="footer-social-icon">
+                            <i class="fa fa-twitter-square background-white"></i>
+                        </span>
+                        <span class="footer-social-icon">
+                            <i class="fa fa-facebook-square background-white"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="bundle.js" async></script>
+</body>
+
+</html>
